@@ -4,14 +4,36 @@
 
 /* OPERATORY */
 
-// Zadanie 1
 
-int number = 0;
-float money = 0;
-string text = string.Empty;
-bool isLogged = false;
-char myChar = 'a';
-decimal price = 0;
+// Zadanie 2
 
-Console.WriteLine($"Zmienne: int: {number}, float: {money}, string: {text}, bool: {isLogged}, char: {myChar}, decimal: {price}");
+string myAge = "Age: ";
+int wifeAge = 18;
+string result = myAge + wifeAge;
+Console.WriteLine(result);
+
+/* Żeby łączyć zmienne, w tym przypadku string z integer, można użyć operatora +. */
+
+// Zadanie 3
+
+bool isTrue = true;
+bool isFalse = false;
+bool isReallyTrue = true;
+
+bool and = isTrue && isFalse;
+bool or = isTrue || isFalse;
+bool negative = !isFalse;
+
+Console.WriteLine($"Zmienne logiczne: {and}, {or}, {negative}");
+
+// Zadanie 4
+
+int a = 5;
+int b = 12;
+int add = a + b;
+int sub = a - b;
+int mul = a * b;
+int div = a / b;
+int mod = a % b;
+Console.WriteLine($"Wyniki działań matematycznych: dodawanie - {add}, odejmowanie - {sub}, mnożenie - {mul}, dzielenie - {div}, modulo - {mod}");
 
