@@ -4,47 +4,47 @@
 
 /* INSTRUKCJE STERUJĄCE I PĘTLE */
 
-// Zadanie 1
-Console.WriteLine("Zadanie 1");
-int n1 = 10, n2 = 20;
+// Zadanie 4* dodatkowe
+Console.WriteLine("Zadanie 4* dodatkowe");
 
-if (n1 <= n2)
-{
-    Console.WriteLine("n2 jest większe od n1 lub n1 jest równe n2");
-}
-else
-{
-    Console.WriteLine("Warunki zadania nie zostały spełnione");
-}
-Console.WriteLine("----------------------------------------------------------");
 
-// Zadanie 2
-Console.WriteLine("Zadanie 2");
-string text = "C#";
-int j = 1;
-
-for (int i = 1; i < 11; i++)
-{
-    Console.WriteLine(i + ": " + text);
-}
-Console.WriteLine("----------------------------------------------------------");
-while (j < 11) {  Console.WriteLine($"{j}: {text}");
-j++;
-};
-
-// Zadanie 3
-
-int n = 10;
+int n = 5;
 for (int i = 0; i < n; i++)
 {
-    if (i % 2 == 0)
+    Console.WriteLine("*");
+    if (i == 4) { break; }
+    for (int j = 0; j <= i; j++)
     {
-        Console.WriteLine($"{i} - Parzysta");
-    }
-    else
-    {
-        Console.WriteLine($"{i} - Nieparzysta");
+        Console.Write("*");
+        if (i == 4) { break; }
     }
 }
 
+// Zadanie 5* dodatkowe
+Console.WriteLine("---------------------------------------------------------------");
+Console.WriteLine("Zadanie 5* dodatkowe");
+int exam = 100;
+Console.WriteLine("Podaj wynik egzaminu 0 - 100 pkt");
+int point = Convert.ToInt32(Console.ReadLine());
+exam = point;
+if (exam >= 0 && exam <= 39)
+{
+    Console.WriteLine($"0 - 39 pkt- Ocena Niedostateczna");
+} else if(exam >= 40 && exam <= 54){
+    Console.WriteLine($"40 - 54 pkt- Ocena Dopuszczająca");
+} else if(exam >= 55 &&  exam <= 69)
+{
+    Console.WriteLine($"55 - 69 pkt- Ocena Dostateczna");
+} else if(exam >= 70 && exam <= 84)
+{
+    Console.WriteLine($"70 - 84 pkt- Ocena Dobra");
+} else if (exam >= 85 && exam >= 98)
+{
+    Console.WriteLine($"85 - 98 pkt- Ocena Bardzo Dobra");
+} else if(exam >= 99 && exam <= 100)
+{
+    Console.WriteLine($"99 - 100 pkt- Ocena Celująca");
+} else { Console.WriteLine("Wartość poza zakresem");
+
+}
 
