@@ -2,49 +2,48 @@
 
 
 
-/* INSTRUKCJE STERUJĄCE I PĘTLE */
+/* KOLEKCJE */
 
-// Zadanie 4* dodatkowe
-Console.WriteLine("Zadanie 4* dodatkowe");
+// Zadanie 1
+Console.WriteLine("KOLEKCJE");
+Console.WriteLine("Zadanie 1");
+string[] colors = { "Niebieski", "Biały", "Żółty", "Czerwony" };
 
+Console.WriteLine($"Mój pierwszy kolor to: {colors[0]}");
+Console.WriteLine($"Mój pierwszy kolor to: {colors[3]}");
 
-int n = 5;
-for (int i = 0; i < n; i++)
+// Zadanie 2
+Console.WriteLine("-------------------------------------------------------------");
+Console.WriteLine("Zadanie 2");
+int[] nums = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+for (int i = 0; i < nums.Length; i++)
 {
-    Console.WriteLine("*");
-    if (i == 4) { break; }
-    for (int j = 0; j <= i; j++)
-    {
-        Console.Write("*");
-        if (i == 4) { break; }
-    }
+    Console.WriteLine($"Liczba: {nums[i]}");
 }
 
-// Zadanie 5* dodatkowe
-Console.WriteLine("---------------------------------------------------------------");
-Console.WriteLine("Zadanie 5* dodatkowe");
-int exam = 100;
-Console.WriteLine("Podaj wynik egzaminu 0 - 100 pkt");
-int point = Convert.ToInt32(Console.ReadLine());
-exam = point;
-if (exam >= 0 && exam <= 39)
+int j = 0;
+while (j < nums.Length)
 {
-    Console.WriteLine($"0 - 39 pkt- Ocena Niedostateczna");
-} else if(exam >= 40 && exam <= 54){
-    Console.WriteLine($"40 - 54 pkt- Ocena Dopuszczająca");
-} else if(exam >= 55 &&  exam <= 69)
-{
-    Console.WriteLine($"55 - 69 pkt- Ocena Dostateczna");
-} else if(exam >= 70 && exam <= 84)
-{
-    Console.WriteLine($"70 - 84 pkt- Ocena Dobra");
-} else if (exam >= 85 && exam >= 98)
-{
-    Console.WriteLine($"85 - 98 pkt- Ocena Bardzo Dobra");
-} else if(exam >= 99 && exam <= 100)
-{
-    Console.WriteLine($"99 - 100 pkt- Ocena Celująca");
-} else { Console.WriteLine("Wartość poza zakresem");
-
+    Console.WriteLine($"Liczba: {nums[j]}");
+    j++;
 }
+Console.WriteLine("-------------------------------------------------------------");
+// Zadanie 3
+List<string> fruits = new List<string>();
+fruits.Add("Jabłko");
+fruits.Add("Gruszka");
+fruits.Add("Śliwka");
+fruits.Add("Arbuz");
 
+foreach (var fruit in fruits)
+{
+    Console.WriteLine($"Owoce: {fruit}");
+}
+ Console.WriteLine("==============================================================");
+fruits.Remove("Jabłko");
+fruits.RemoveAt(2);
+
+foreach (var fruit in fruits)
+{
+    Console.WriteLine($"Owoce: {fruit}");
+}
